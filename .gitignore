@@ -1,0 +1,28 @@
+*.py[cod]
+
+# Editors
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+
+# Packages
+.venv
+venv
+*.egg
+*.egg-info
+dist
+build
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Sphinx
+docs/_build
+README.html

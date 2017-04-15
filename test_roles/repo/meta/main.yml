@@ -1,0 +1,2 @@
+---
+dependencies: ['yum_mirror', 'apt_mirror', 'devpi']

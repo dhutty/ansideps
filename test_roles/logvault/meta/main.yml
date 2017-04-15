@@ -1,0 +1,2 @@
+---
+dependencies: ['rsyslog', 'elk', 'grafana', 'influxdb']
