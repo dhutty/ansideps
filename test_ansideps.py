@@ -5,14 +5,16 @@ from subprocess import check_output
 
 def test_forward_deps():
     '''Test forward (descendant) dependencies.'''
-    result = run_cmd("ansideps elk")
-    assert result == "elasticsearch\nlogstash\nkibana\n"
+    result = run_cmd("python ansideps.py elk")
+    deps = result.rstrip('\n').split('\n')
+    assert sorted(deps) == sorted(['elasticsearch', 'logstash', 'kibana'])
 
 
 def test_reverse_deps():
     '''Test reverse (ancestor) dependencies.'''
-    result = run_cmd("ansideps --reverse elk")
-    assert result == "logvault\n"
+    result = run_cmd("python ansideps.py --reverse elk")
+    deps = result.rstrip('\n').split('\n')
+    assert sorted(deps) == sorted(['logvault'])
 
 
 def run_cmd(cmd):

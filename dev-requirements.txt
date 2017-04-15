@@ -1,3 +1,6 @@
 pytest
 invoke
 tox
+pylint
+flake8
+pep8
